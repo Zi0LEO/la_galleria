@@ -9,7 +9,7 @@ body {
   display: flex;
   align-items: center;
   top: 0;
-  background-image: url("../public/images/purpleBG.png");
+  background-image: url("../images/purpleBG.png");
   background-position: 0% 30%;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -39,7 +39,7 @@ body {
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  grid-template-rows: repeat(2, 90svh);
+  grid-template-rows: repeat(2, calc(100svh - 100px))
 }
 
 .landing {
@@ -48,7 +48,6 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: row;
-  height: calc(100svh - 100px);
 }
 
 .landing-text {
@@ -82,7 +81,7 @@ body {
   overflow: hidden;
   border: 2px solid #000;
   border-radius: 30px;
-  margin: 10px;
+  margin: 5px 10px;
 }
 
 .nav-element {
@@ -112,7 +111,7 @@ body {
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(4, minmax(0, 1fr));
   gap: 1px;
 }
 
@@ -160,4 +159,29 @@ body {
 
 .image-container:hover::before {
   background-size: 150%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .home-main {
+    margin-top: 100px;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, 90svh);
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  .image-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+  }
+
+  .nav-slice {
+    height: calc(150svh - 100px);
+  }
 }

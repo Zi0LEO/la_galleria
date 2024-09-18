@@ -13,6 +13,9 @@ const ExplorePreview = () => {
       <Pic />
       <Pic />
       <Pic />
+      <Pic />
+      <Pic />
+      <Pic />
   </div>
   ) 
 };
