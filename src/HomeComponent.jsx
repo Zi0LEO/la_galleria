@@ -1,5 +1,6 @@
 import ExplorePreview from "./Explore";
 import React from "react";
+import PersonalPreview from "./Personal";
 
 const HomeComponent = (props) => {
 
@@ -9,17 +10,17 @@ const HomeComponent = (props) => {
 	if (text === "Esplora") {
 		content = ExplorePreview;
 	} else if (text === "Shop") {
-		//////////////////   content = ShopPreview;
+		//content = ShopPreview;
 	} else {
-		// content = PersonalPreview;
+		content = PersonalPreview;
 	}
 
 	return (
-		<div className="nav-slice h-[calc(100svh-100px)] row-start-2 flex flex-col overflow-hidden border-2 border-black rounded-[30px] m-[5px_10px]">
+		<div className="min-h-28 nav-slice h-full flex flex-col overflow-hidden border-2 border-black rounded-[30px] m-[5px_10px]">
 			<div className="h-[80px] bg-[#2b2b2b] text-center flex justify-center items-center hover:bg-[#333]">
-				<h4 className="text-[#e2dfd2]"> {text} </h4>
+				<h4 className="text-xl text-[#e2dfd2]"> {text} </h4>
 			</div>
-			<div className="h-[calc(100%-80px)]">
+			<div className="overflow-hidden h-full">
 				{content ? React.createElement(content) : null}
 			</div>
 		</div>

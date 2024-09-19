@@ -1,15 +1,14 @@
-import Pic from "./Pic";
+import PicRow from "./PicRow";
 
 const ExplorePreview = () => {
+	const rows = 3;
 
-const numPics=12;
-
-return (
-    <div className="image-grid h-[100%] grid justify-center content-center grid-cols-3 grid-rows-4 gap-[1px]">
-      {Array.from({ length: numPics }).map((_, index) => (
-        <Pic key={index} />
+	return (
+		<div className="h-full w-full flex flex-col justify-center content-center">
+      {Array.from({ length: rows }).map((_, index) => (
+			<PicRow key={index} />
       ))}
-    </div>
-  );
-}
+		</div>
+	);
+};
 export default ExplorePreview;
