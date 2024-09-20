@@ -8,7 +8,7 @@ function App() {
 	return (
 		<div className="App">
 			<Header />
-			<div className="home-main w-screen grid grid-cols-[repeat(2,50%)] grid-rows-[repeat(3,85svh)]">
+			<div className="home-main overflow-hidden w-screen grid grid-cols-[repeat(3,1fr)] grid-rows-[repeat(2,85svh)]">
         <Landing />
 				<HomeComponent text="Esplora" url="explore.html" />
 				<HomeComponent text="Area Personale" url="Personal.html" />

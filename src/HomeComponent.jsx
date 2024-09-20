@@ -20,7 +20,7 @@ const HomeComponent = (props) => {
 			<div className="h-[80px] bg-[#2b2b2b] text-center flex justify-center items-center hover:bg-[#333]">
 				<h4 className="text-xl text-[#e2dfd2]"> {text} </h4>
 			</div>
-			<div className="overflow-hidden h-full">
+			<div className="bg-[#e2dfd2] overflow-hidden h-full">
 				{content ? React.createElement(content) : null}
 			</div>
 		</div>
