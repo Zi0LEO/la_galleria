@@ -1,4 +1,4 @@
-import PicRenderer from "./PicRenderer";
+import { PicRenderer } from "./PicHandler";
 
 const ExplorePreview = () => {
 	const rows = 3;

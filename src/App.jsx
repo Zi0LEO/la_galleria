@@ -1,7 +1,5 @@
 import "./App.css";
-import Header from "./Header";
-import HomeComponent from "./HomeComponent";
-import Landing from "./Landing";
+import { Header, HomeComponent, Landing } from "./BaseComponents";
 
 function App() {
 	return (
