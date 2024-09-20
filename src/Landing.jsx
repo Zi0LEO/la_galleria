@@ -1,7 +1,7 @@
 const Landing = () => {
 	return (
 		<div 
-  className="col-span-3 row-start-1 overflow-hidden flex flex-row">
+  className="h-[85svh] overflow-hidden flex flex-row">
 			<div 
       className="rounded-[200%] z-[1] bg-radial bg-[radial-gradient(rgb(226_223_210_/_100%),rgb(226_223_210_/_70%),rgb(226_223_210_/_20%))] w-full h-[200%] absolute left-[-50%] top-[-50%] flex justify-center items-center">
 				<h3

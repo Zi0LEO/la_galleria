@@ -22,10 +22,6 @@ const PicRow = () => {
 		return () => window.removeEventListener("resize", updateNumPics);
 	}, []);
 
-	useEffect(() => {
-		console.log(numPics); // Logs the updated number of pictures
-	}, [numPics]);
-
 	return (
 		<div className="flex flex-row flex-auto h-[33%]">
 			{Array.from({ length: numPics }).map((_, index) => (
