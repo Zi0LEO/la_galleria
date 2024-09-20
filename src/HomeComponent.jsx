@@ -6,13 +6,16 @@ const HomeComponent = (props) => {
 
 	const text = props.text;
 	let content;
+  let position;
 
 	if (text === "Esplora") {
 		content = ExplorePreview;
+    position = 2;
 	} else if (text === "Shop") {
 		//content = ShopPreview;
 	} else {
 		content = PersonalPreview;
+    position = 3;
 	}
 
 	return (
