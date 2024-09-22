@@ -1,5 +1,5 @@
 import "./App.css";
-import { Header, HomeComponent, Landing } from "./BaseComponents";
+import { Header, HomeComponent, Landing, Footer } from "./BaseComponents";
 
 function App() {
 	return (
@@ -13,6 +13,7 @@ function App() {
 					<HomeComponent text="Area Personale" />
 				</div>
 			</div>
+      <Footer />
 		</div>
 	);
 }
