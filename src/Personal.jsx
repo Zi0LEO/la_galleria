@@ -1,5 +1,5 @@
 import { PicRenderer } from "./PicHandler";
-import Button from "./Button";
+import { Button } from "./Utilities";
 
 const PersonalPreview = () => {
 	let imagePath = "/images/profileImage.jpg";
@@ -28,4 +28,4 @@ const PersonalPreview = () => {
 	);
 };
 
-export default PersonalPreview;
+export { PersonalPreview };

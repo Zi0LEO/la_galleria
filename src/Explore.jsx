@@ -7,4 +7,5 @@ const ExplorePreview = () => {
   <PicRenderer rows={ rows } />
 	);
 };
-export default ExplorePreview;
+
+export { ExplorePreview };

@@ -8,9 +8,9 @@ function App() {
 			<div className="home-main overflow-hidden w-screen flex flex-col">
 				<Landing />
 				<div className="w-full flex flex-col justify-around items-center xl:flex-row">
-					<HomeComponent text="Esplora" url="explore.html" />
-					<HomeComponent text="Area Personale" url="Personal.html" />
-					<HomeComponent text="Area Personale" url="Personal.html" />
+					<HomeComponent text="Esplora" />
+					<HomeComponent text="Shop" />
+					<HomeComponent text="Area Personale" />
 				</div>
 			</div>
 		</div>

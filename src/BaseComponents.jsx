@@ -1,7 +1,8 @@
-import ExplorePreview from "./Explore";
 import React from "react";
-import PersonalPreview from "./Personal";
 
+import { ExplorePreview } from "./Explore";
+import { PersonalPreview } from "./Personal";
+import { ShopPreview } from "./Shop";
 const Header = () => {
 
 	return (
@@ -22,16 +23,13 @@ const HomeComponent = (props) => {
 
 	const text = props.text;
 	let content;
-  let position;
 
 	if (text === "Esplora") {
 		content = ExplorePreview;
-    position = 2;
 	} else if (text === "Shop") {
-		//content = ShopPreview;
+		content = ShopPreview;
 	} else {
 		content = PersonalPreview;
-    position = 3;
 	}
 
 	return (
