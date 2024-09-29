@@ -1,7 +1,7 @@
-import { PicRenderer } from "./PicHandler";
-import { Button } from "./Utilities";
+import { PicRenderer } from "../PicHandler";
+import { Button } from "../Utilities";
 
-const PersonalPreview = () => {
+export const PersonalPreview = () => {
 	let imagePath = "/images/profileImage.jpg";
   let profileBanner = "/images/profileBG.jpg";
 
@@ -27,5 +27,3 @@ const PersonalPreview = () => {
 		</div>
 	);
 };
-
-export { PersonalPreview };

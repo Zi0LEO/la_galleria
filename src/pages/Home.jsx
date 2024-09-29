@@ -1,9 +1,7 @@
-import { Header, HomeComponent, Landing, Footer } from "../BaseComponents";
+import { HomeComponent, Landing } from "../BaseComponents";
 
-function Home() {
+export default function Home() {
 	return (
-		<div className="Home">
-			<Header />
 			<div className="home-main overflow-hidden w-screen flex flex-col">
 				<Landing />
 				<div className="w-full flex flex-col justify-around items-center xl:flex-row">
@@ -12,9 +10,5 @@ function Home() {
 					<HomeComponent text="Area Personale" />
 				</div>
 			</div>
-      <Footer />
-		</div>
 	);
 }
-
-export default Home;

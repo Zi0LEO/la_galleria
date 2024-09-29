@@ -4,23 +4,23 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import XIcon from "@mui/icons-material/X";
 
-import { ExplorePreview } from "./Explore";
-import { PersonalPreview } from "./Personal";
-import { ShopPreview } from "./Shop";
+import { ExplorePreview } from "./pages/Explore";
+import { PersonalPreview } from "./pages/Personal";
+import { ShopPreview } from "./pages/Shop";
 
-const Header = () => {
+function HeaderFun() {
 	return (
 		<header className="sticky top-0 flex items-center bg-[url('../images/purpleBG.png')] bg-no-repeat bg-[0%_30%] bg-cover h-[15dvh] w-screen z-[999] shadow-[0_5px_15px_rgba(0,0,0,0.4)]">
 			<h2 className="relative text-[#e2dfd2] font-yellowtail font-normal font-thin text-7xl px-[max(2%,20px)]">
-				{" "}
-				La Galleria{" "}
+				La Galleria
 			</h2>
 			<div className="flex-grow h-[2px] bg-[#e2dfd2]"></div>
 		</header>
 	);
 };
 
-export { Header };
+export const Header = React.memo(HeaderFun);
+
 
 const HomeComponent = (props) => {
 	const text = props.text;
@@ -68,7 +68,7 @@ const Landing = () => {
 
 export { Landing };
 
-const Footer = () => {
+function FooterFun() {
 	return (
 		<div className="bg-[#2b2b2b] h-[15vh] w-full">
 			<div className="flex flex-row h-full justify-center pt-2">
@@ -115,4 +115,4 @@ const Footer = () => {
 	);
 };
 
-export { Footer };
+export const Footer = React.memo(FooterFun);

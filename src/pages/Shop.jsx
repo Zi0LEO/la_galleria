@@ -1,5 +1,6 @@
-import { Button } from "./Utilities";
-const ShopPreview = () => {
+import { Button } from "../Utilities";
+
+export const ShopPreview = () => {
 	function getBalance() {
 		return Math.floor(Math.random() * 10000.0) / 100.0;
 	}
@@ -21,5 +22,3 @@ const ShopPreview = () => {
 		</div>
 	);
 };
-
-export { ShopPreview };
