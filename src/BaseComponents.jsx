@@ -70,9 +70,9 @@ export { Landing };
 
 const Footer = () => {
 	return (
-		<div className="bg-[#2b2b2b] h-[25vh] w-full">
-			<div className="flex flex-row justify-center">
-				<div className="flex flex-col mx-6">
+		<div className="bg-[#2b2b2b] h-[15vh] w-full">
+			<div className="flex flex-row h-full justify-center pt-2">
+				<div className="flex flex-col mx-6 gap-[10px]">
 					<span>
 						<p className="text-[#e2dfd2]">Disclaimer</p>
 					</span>
@@ -84,7 +84,7 @@ const Footer = () => {
 					</span>
 				</div>
 
-				<div className="flex flex-col mx-6">
+				<div className="flex flex-col mx-6 gap-[10px]">
 					<span>
 						<p className="text-[#e2dfd2]">Impostazioni</p>
 					</span>
@@ -96,20 +96,18 @@ const Footer = () => {
 					</span>
 				</div>
 
-				<div
-					className="flex flex-col mx-6"
-				>
+				<div className="flex flex-col mx-6 gap-[10px]">
 					<span>
 						{" "}
-						<FacebookIcon style={{ color: "white" }}/>{" "}
+						<FacebookIcon style={{ color: "white" }} />{" "}
 					</span>
 					<span>
 						{" "}
-						<InstagramIcon  style={{ color: "white" }}/>{" "}
+						<InstagramIcon style={{ color: "white" }} />{" "}
 					</span>
 					<span>
 						{" "}
-						<XIcon  style={{ color: "white" }}/>{" "}
+						<XIcon style={{ color: "white" }} />{" "}
 					</span>
 				</div>
 			</div>
