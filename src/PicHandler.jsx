@@ -54,7 +54,7 @@ const Pic = () => {
 
 	return (
 		<div
-			className="relative w-full h-64 flex justify-center items-center bg-cover transition-all duration-500 ease-in-out m-1 image-container"
+			className="cursor-pointer relative w-full h-64 flex justify-center items-center bg-cover transition-all duration-500 ease-in-out m-1 image-container"
 			style={{ backgroundImage: `url(${path})` }}
 		>
 			<img
