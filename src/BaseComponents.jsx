@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -11,9 +12,11 @@ import { ShopPreview } from "./pages/Shop";
 function HeaderFun() {
 	return (
 		<header className="sticky top-0 flex items-center bg-[url('../images/purpleBG.png')] bg-no-repeat bg-[0%_30%] bg-cover h-[15dvh] w-screen z-[999] shadow-[0_5px_15px_rgba(0,0,0,0.4)]">
-			<h2 className="relative text-[#e2dfd2] font-yellowtail font-normal font-thin text-7xl px-[max(2%,20px)]">
+      <Link to="/">
+			<h2 className="relative text-[#e2dfd2] font-yellowtail font-normal font-thin text-7xl px-[max(2%,20px)] cursor-pointer">
 				La Galleria
 			</h2>
+      </Link>
 			<div className="flex-grow h-[2px] bg-[#e2dfd2]"></div>
 		</header>
 	);
@@ -25,9 +28,11 @@ export const Header = React.memo(HeaderFun);
 const HomeComponent = (props) => {
 	const text = props.text;
 	let content;
+  let link;
 
 	if (text === "Esplora") {
 		content = ExplorePreview;
+    link = "/explore";
 	} else if (text === "Shop") {
 		content = ShopPreview;
 	} else {
@@ -36,9 +41,11 @@ const HomeComponent = (props) => {
 
 	return (
 		<div className="min-h-fit w-[calc(100%-15px)] h-[85svh] flex flex-col overflow-hidden border-4 border-black rounded-[30px] m-[5px_10px] xl:w-[calc(33%-15px)]">
-			<div className="h-[80px] bg-[#2b2b2b] text-center flex justify-center items-center hover:bg-[#333]">
+      <Link to={link} >
+			<div className="cursor-pointer h-[80px] bg-[#2b2b2b] text-center flex justify-center items-center transition-all duration-500 ease-in-out hover:bg-[#393e46]">
 				<h4 className="text-xl text-[#e2dfd2]"> {text} </h4>
 			</div>
+      </Link>
 			<div className="bg-[#e2dfd2] overflow-scroll h-full">
 				{content ? React.createElement(content) : null}
 			</div>
