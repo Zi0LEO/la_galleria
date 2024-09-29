@@ -1,9 +1,8 @@
-import "./App.css";
-import { Header, HomeComponent, Landing, Footer } from "./BaseComponents";
+import { Header, HomeComponent, Landing, Footer } from "../BaseComponents";
 
-function App() {
+function Home() {
 	return (
-		<div className="App">
+		<div className="Home">
 			<Header />
 			<div className="home-main overflow-hidden w-screen flex flex-col">
 				<Landing />
@@ -18,4 +17,4 @@ function App() {
 	);
 }
 
-export default App;
+export default Home;
