@@ -9,5 +9,5 @@ node_modules dist dist-ssr *.local
 .idea .DS_Store *.suo *.ntvs* *.njsproj *.sln *.sw?
 .stylelintrc.json
 
-.jpg .png
+*.jpg *.png
 
