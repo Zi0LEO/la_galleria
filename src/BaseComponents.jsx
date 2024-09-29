@@ -11,7 +11,7 @@ import { ShopPreview } from "./pages/Shop";
 
 function HeaderFun() {
 	return (
-		<header className="sticky top-0 flex items-center bg-[url('../images/purpleBG.png')] bg-no-repeat bg-[0%_30%] bg-cover h-[15dvh] w-screen z-[999] shadow-[0_5px_15px_rgba(0,0,0,0.4)]">
+		<header className="sticky top-0 flex items-center bg-[url('../images/purpleBG.jpg')] bg-no-repeat bg-[0%_30%] bg-cover h-[15dvh] w-screen z-[999] shadow-[0_5px_15px_rgba(0,0,0,0.4)]">
       <Link to="/">
 			<h2 className="relative text-[#e2dfd2] font-yellowtail font-normal font-thin text-7xl px-[max(2%,20px)] cursor-pointer">
 				La Galleria
