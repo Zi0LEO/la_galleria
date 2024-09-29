@@ -6,13 +6,18 @@
 
 body {
   margin: 0;
-   background-color: #026873;
-    background-size: 13px 13px, 29px 29px, 37px 37px, 53px 53px;
-    background-image: -webkit-linear-gradient(0, rgba(255, 255, 255, .07) 50%, transparent 50%), -webkit-linear-gradient(0, rgba(255, 255, 255, .13) 50%, transparent 50%), -webkit-linear-gradient(0, transparent 50%, rgba(255, 255, 255, .17) 50%), -webkit-linear-gradient(0, transparent 50%, rgba(255, 255, 255, .19) 50%);
-    background-image: -moz-linear-gradient(0, rgba(255, 255, 255, .07) 50%, transparent 50%), -moz-linear-gradient(0, rgba(255, 255, 255, .13) 50%, transparent 50%), -moz-linear-gradient(0, transparent 50%, rgba(255, 255, 255, .17) 50%), -moz-linear-gradient(0, transparent 50%, rgba(255, 255, 255, .19) 50%);
-    background-image: -ms-linear-gradient(0, rgba(255, 255, 255, .07) 50%, transparent 50%), -ms-linear-gradient(0, rgba(255, 255, 255, .13) 50%, transparent 50%), -ms-linear-gradient(0, transparent 50%, rgba(255, 255, 255, .17) 50%), -ms-linear-gradient(0, transparent 50%, rgba(255, 255, 255, .19) 50%);
-    background-image: -o-linear-gradient(0, rgba(255, 255, 255, .07) 50%, transparent 50%), -o-linear-gradient(0, rgba(255, 255, 255, .13) 50%, transparent 50%), -o-linear-gradient(0, transparent 50%, rgba(255, 255, 255, .17) 50%), -o-linear-gradient(0, transparent 50%, rgba(255, 255, 255, .19) 50%);
-    background-image: linear-gradient(0, rgba(255, 255, 255, .07) 50%, transparent 50%), linear-gradient(0, rgba(255, 255, 255, .13) 50%, transparent 50%), linear-gradient(0, transparent 50%, rgba(255, 255, 255, .17) 50%), linear-gradient(0, transparent 50%, rgba(255, 255, 255, .19) 50%);
+  background-color: rgba(242,242,242,255);
+  z-index: -20;
+}
+
+body::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-image: url("/images/body_background.jpg");
+  z-index: -19;
+  top: 15vh;
 }
 
 .image-container::before {
@@ -40,73 +45,6 @@ body {
 
 .image-container:hover::before {
   background-size: 300%;
-}
-
-
-ion-icon {
-  color: white;
-  font-size: 30px;
-  background: var(--color);
-  filter: brightness(0.9);
-  padding: 5px;
-  margin-left: 15px;
-  border-radius: 5px 0 0 5px;
-  margin-bottom: -14px;
-  margin-right: -4px;
-}
-
-
-
-/* btn front */
-.btn-flip::before {
-  content: attr(data-front);
-  color: white;
-  background: var(--color);
-  padding: 0 20px;
-  display: block;
-  line-height: 40px;
-  position: relative;
-  border-radius: 0 5px 5px 0;
-  transition: 0.5s;
-  /* tmp */
-  opacity: 1;
-}
-
-.btn-flip {
-  line-height: 40px;
-  position: relative;
-  letter-spacing: 1px;
-  text-align: center;
-  font-family: "Open Sans";
-  display: inline-block;
-  margin: 10px auto;
-  cursor: pointer;
-}
-
-/* btn back */
-.btn-flip::after {
-  content: attr(data-back);
-  color: white;
-  background: var(--color);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  border-radius: 0 5px 5px 0;
-  /* tmp */
-  opacity: 1;
-  transition: 0.5s;
-  transform: translateY(-50%) rotateX(90deg);
-}
-
-/* hover */
-.btn-flip:hover::after {
-  opacity: 1;
-  transform: translateY(0) rotateX(0);
-}
-.btn-flip:hover::before {
-  opacity: 0;
-  transform: translateY(50%) rotateX(90deg);
 }
 
 @media only screen and (width <=1280px) {

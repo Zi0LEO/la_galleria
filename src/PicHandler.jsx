@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 
 const PicRenderer = (props) => {
 	const rows = props.rows;
+  const pics = props.pics;
 
 	return (
 		<div className="h-full w-full flex flex-col justify-center content-center">
 			{Array.from({ length: rows }).map((_, index) => (
-				<PicRow key={index} />
+				<PicRow key={index} pics={pics}/>
 			))}
 		</div>
 	);
@@ -14,7 +15,7 @@ const PicRenderer = (props) => {
 
 export { PicRenderer };
 
-const PicRow = () => {
+const PicRow = (props) => {
 	const [numPics, setNumPics] = useState();
 
 	useEffect(() => {
@@ -24,7 +25,7 @@ const PicRow = () => {
 			} else if (window.innerWidth <= 1280 && window.innerWidth > 768) {
 				setNumPics(4);
 			} else {
-				setNumPics(3);
+				setNumPics(props.pics);
 			}
 		};
 
@@ -33,7 +34,7 @@ const PicRow = () => {
 		window.addEventListener("resize", updateNumPics);
 
 		return () => window.removeEventListener("resize", updateNumPics);
-	}, []);
+	}, [props.pics]);
 
 	return (
 		<div className="flex flex-row flex-auto h-[33%]">
@@ -53,7 +54,7 @@ const Pic = () => {
 
 	return (
 		<div
-			className="relative w-full h-full flex justify-center items-center bg-cover transition-all duration-500 ease-in-out image-container"
+			className="relative w-full h-64 flex justify-center items-center bg-cover transition-all duration-500 ease-in-out m-1 image-container"
 			style={{ backgroundImage: `url(${path})` }}
 		>
 			<img

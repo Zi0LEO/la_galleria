@@ -22,7 +22,7 @@ export const PersonalPreview = () => {
 				<Button text="Le mie foto" />
 			</div>
 			<div className="flex grow-0 shrink-0">
-				<PicRenderer rows={1} />
+				<PicRenderer rows={1} pics={3}/>
 			</div>
 		</div>
 	);
