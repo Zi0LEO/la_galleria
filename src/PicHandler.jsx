@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const PicRenderer = (props) => {
 	const rows = props.rows;
-  const pics = props.pics;
+	const pics = props.pics;
 
 	return (
 		<div className="h-full w-full flex flex-col justify-center content-center">
 			{Array.from({ length: rows }).map((_, index) => (
-				<PicRow key={index} pics={pics}/>
+				<PicRow key={index} pics={pics} />
 			))}
 		</div>
 	);
@@ -37,7 +38,7 @@ const PicRow = (props) => {
 	}, [props.pics]);
 
 	return (
-		<div className="flex flex-row flex-auto h-[33%]">
+		<div className="flex flex-row shrink flex-auto">
 			{Array.from({ length: numPics }).map((_, index) => (
 				<Pic key={index} />
 			))}
@@ -53,7 +54,8 @@ const Pic = () => {
 	const path = "/pics/img" + randomInt + ".jpg";
 
 	return (
-		<div
+		<Link
+			to={`/explore/${randomInt}`}
 			className="cursor-pointer relative w-full h-64 flex justify-center items-center bg-cover transition-all duration-500 ease-in-out m-1 image-container"
 			style={{ backgroundImage: `url(${path})` }}
 		>
@@ -62,6 +64,6 @@ const Pic = () => {
 				src={path}
 				alt="a pic"
 			/>
-		</div>
+		</Link>
 	);
 };

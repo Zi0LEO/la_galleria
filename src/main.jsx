@@ -6,6 +6,7 @@ import "./index.css";
 import Layout from "./Layout";
 import Home from "./pages/Home";
 import Explore from "./pages/Explore";
+import PicPage from "./pages/PicPage";
 
 const router = createBrowserRouter([
 	{
@@ -13,12 +14,21 @@ const router = createBrowserRouter([
 		element: <Layout />,
 		children: [
 			{
-        path: "/",
+				path: "/",
 				element: <Home />,
 			},
 			{
 				path: "/explore",
-				element: <Explore />,
+				children: [
+					{
+						path: "",
+						element: <Explore />,
+					},
+					{
+						path: ":id",
+						element: <PicPage />,
+					},
+				],
 			},
 		],
 	},
