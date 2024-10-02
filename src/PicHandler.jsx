@@ -6,7 +6,7 @@ const PicRenderer = (props) => {
 	const pics = props.pics;
 
 	return (
-		<div className="h-full w-full flex flex-col justify-center content-center">
+		<div className="overflow-hidden h-full w-full min-h-0 flex flex-col justify-around content-center gap-1">
 			{Array.from({ length: rows }).map((_, index) => (
 				<PicRow key={index} pics={pics} />
 			))}
@@ -38,7 +38,7 @@ const PicRow = (props) => {
 	}, [props.pics]);
 
 	return (
-		<div className="flex flex-row shrink flex-auto">
+		<div className="overflow-hidden flex-1 min-h-0 flex flex-row gap-1 flex-wrap">
 			{Array.from({ length: numPics }).map((_, index) => (
 				<Pic key={index} />
 			))}
@@ -56,7 +56,7 @@ const Pic = () => {
 	return (
 		<Link
 			to={`/explore/${randomInt}`}
-			className="cursor-pointer relative w-full h-64 flex justify-center items-center bg-cover transition-all duration-500 ease-in-out m-1 image-container"
+			className="min-h-0 aspect-square overflow-hidden cursor-pointer relative w-full flex flex-1 justify-center items-center bg-cover transition-all duration-500 ease-in-out image-container"
 			style={{ backgroundImage: `url(${path})` }}
 		>
 			<img

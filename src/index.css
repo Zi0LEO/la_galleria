@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Yellowtail&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Yellowtail&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  background-color: rgba(242,242,242,255);
+  background-color: rgb(242 242 242 / 25500%);
   z-index: -20;
 }
 
@@ -16,8 +16,8 @@ body::before {
   height: 100%;
   position: fixed;
   background-image: url("/images/body_background.jpg");
+  background-size: cover;
   z-index: -19;
-  top: 15vh;
 }
 
 .image-container::before {
@@ -36,26 +36,12 @@ body::before {
   transition: all 0.5s ease;
 }
 
-
 .image-container:hover .main-image {
-  height: 80%;
-  width: 80%;
+  transform: scale(1.1);
   box-shadow: 12px 12px 12px rgb(0 0 0 / 20%);
 }
 
 .image-container:hover::before {
   background-size: 300%;
-}
-
-@media only screen and (width <=1280px) {
-  .home-main {
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(5, 1fr);
-  }
-}
-
-@media screen and (width <=768px) {
-  .nav-slice {
-    height: calc(150svh - 100px);
-  }
+  background-position: center;
 }

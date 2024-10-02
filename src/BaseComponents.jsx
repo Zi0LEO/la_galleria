@@ -46,7 +46,7 @@ const HomeComponent = (props) => {
 				<h4 className="text-xl text-[#e2dfd2]"> {text} </h4>
 			</div>
       </Link>
-			<div className="bg-[#e2dfd2] overflow-scroll h-full">
+			<div className="bg-[#e2dfd2] h-full min-h-0">
 				{content ? React.createElement(content) : null}
 			</div>
 		</div>
