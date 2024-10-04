@@ -21,11 +21,11 @@ const router = createBrowserRouter([
 				path: "/explore",
 				children: [
 					{
-						path: "",
+            path: "",
 						element: <Explore />,
 					},
 					{
-						path: ":id",
+            path: ":id",
 						element: <PicPage />,
 					},
 				],

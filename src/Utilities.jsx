@@ -18,3 +18,9 @@ export const SuggestedTags = () => {
 		</div>
 	);
 };
+
+export const PageNavigator = (props) => {
+return <>
+  </>
+}
+
