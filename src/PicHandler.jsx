@@ -3,31 +3,53 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 function PicRenderer(props) {
-	const rows = props.rows;
-	const pics = props.pics;
+	const [numCols, setNumCols] = useState();
+
+	useEffect(() => {
+		const updateNumCols = () => {
+			if (window.innerWidth <= 768) {
+				setNumCols(2);
+			} else if (window.innerWidth <= 1280 && window.innerWidth > 768) {
+				setNumCols(4);
+			} else {
+				setNumCols(props.cols);
+			}
+		};
+
+		updateNumCols();
+
+		window.addEventListener("resize", updateNumCols);
+
+		return () => window.removeEventListener("resize", updateNumCols);
+	});
 
 	return (
 		<div className="flex gap-1">
-			{Array.from({ length: 3 }).map((_, index) => (
-				<PicColumn key={index} pics={pics/3} />
+			{Array.from({ length: numCols }).map((_, index) => (
+				<PicColumn key={index} />
 			))}
 		</div>
 	);
 }
 
 PicRenderer.propTypes = {
-	rows: PropTypes.int,
-	pics: PropTypes.int,
+	cols: PropTypes.int,
+};
+
+PicRenderer.defaultProps = {
+	cols: 3,
 };
 
 export default PicRenderer;
 
-const PicColumn = (props) => {
+// to do: calculate height of parent and keep rendering images till it is full
+const PicColumn = () => {
 
-  return <div className="flex flex-col" >
-  </div>
-
-}
+	return (
+		<div className="flex flex-col">
+		</div>
+	);
+};
 
 const Pic = () => {
 	function getRandomInt(max) {
