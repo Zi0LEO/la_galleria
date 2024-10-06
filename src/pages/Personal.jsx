@@ -1,4 +1,4 @@
-import { PicRenderer } from "../PicHandler";
+import PicRenderer from "../PicHandler";
 import { Button } from "../Utilities";
 
 export const PersonalPreview = () => {
@@ -27,7 +27,7 @@ export const PersonalPreview = () => {
 				<Button text="Le mie foto" />
 			</div>
 			<div className="h-[20%] max-h-[150px] relative">
-				<PicRenderer rows={1} pics={4} />
+				<PicRenderer rows={1} picPerRow={4} />
 			</div>
 		</div>
 	);

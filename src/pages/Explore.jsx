@@ -1,14 +1,16 @@
-import { PicRenderer } from "../PicHandler";
-import { SuggestedTags } from "../Utilities";
+import PicRenderer from "../PicHandler";
+import { SuggestedTags, PageNavigator } from "../Utilities";
 
 export const ExplorePreview = () => {
 	const rows = 3;
   const pics = 3;
 
-	return <PicRenderer rows={rows} pics={pics} />;
+	return <PicRenderer rows={rows} picPerRow={pics} />;
 };
 
 export default function Explore() {
+  const currentUrl = window.location.href;
+
 	return (
 		<div className="flex flex-col items-center">
 			<div className="h-[35vh] w-screen flex flex-col justify-center items-center bg-[url(/images/explore_banner.jpg)]">
@@ -19,6 +21,7 @@ export default function Explore() {
 				/>
         <SuggestedTags />
 			</div>
+      <PageNavigator currentUrl={ currentUrl } />
       <div className="w-[80vw]">
       <PicRenderer rows="10" pics="5"/>
       </div>

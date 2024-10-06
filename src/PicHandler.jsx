@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const PicRenderer = (props) => {
+export default function PicRenderer(props) {
 	const rows = props.rows;
-	const pics = props.pics;
+	const picPerRow = props.picPerRow;
 
 	return (
 		<div className="overflow-hidden h-full w-full min-h-0 flex flex-col justify-around content-center gap-1">
 			{Array.from({ length: rows }).map((_, index) => (
-				<PicRow key={index} pics={pics} />
+				<PicRow key={index} picPerRow={picPerRow} />
 			))}
 		</div>
 	);
@@ -26,7 +26,7 @@ const PicRow = (props) => {
 			} else if (window.innerWidth <= 1280 && window.innerWidth > 768) {
 				setNumPics(4);
 			} else {
-				setNumPics(props.pics);
+				setNumPics(props.picPerRow);
 			}
 		};
 
@@ -35,7 +35,7 @@ const PicRow = (props) => {
 		window.addEventListener("resize", updateNumPics);
 
 		return () => window.removeEventListener("resize", updateNumPics);
-	}, [props.pics]);
+	}, [props.picPerRow]);
 
 	return (
 		<div className="overflow-hidden flex-1 min-h-0 flex flex-row gap-1 flex-wrap">
