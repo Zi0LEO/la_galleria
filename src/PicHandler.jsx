@@ -1,50 +1,33 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-export default function PicRenderer(props) {
+function PicRenderer(props) {
 	const rows = props.rows;
-	const picPerRow = props.picPerRow;
+	const pics = props.pics;
 
 	return (
-		<div className="overflow-hidden h-full w-full min-h-0 flex flex-col justify-around content-center gap-1">
-			{Array.from({ length: rows }).map((_, index) => (
-				<PicRow key={index} picPerRow={picPerRow} />
+		<div className="flex gap-1">
+			{Array.from({ length: 3 }).map((_, index) => (
+				<PicColumn key={index} pics={pics/3} />
 			))}
 		</div>
 	);
+}
+
+PicRenderer.propTypes = {
+	rows: PropTypes.int,
+	pics: PropTypes.int,
 };
 
-export { PicRenderer };
+export default PicRenderer;
 
-const PicRow = (props) => {
-	const [numPics, setNumPics] = useState();
+const PicColumn = (props) => {
 
-	useEffect(() => {
-		const updateNumPics = () => {
-			if (window.innerWidth <= 768) {
-				setNumPics(2);
-			} else if (window.innerWidth <= 1280 && window.innerWidth > 768) {
-				setNumPics(4);
-			} else {
-				setNumPics(props.picPerRow);
-			}
-		};
+  return <div className="flex flex-col" >
+  </div>
 
-		updateNumPics();
-
-		window.addEventListener("resize", updateNumPics);
-
-		return () => window.removeEventListener("resize", updateNumPics);
-	}, [props.picPerRow]);
-
-	return (
-		<div className="overflow-hidden flex-1 min-h-0 flex flex-row gap-1 flex-wrap">
-			{Array.from({ length: numPics }).map((_, index) => (
-				<Pic key={index} />
-			))}
-		</div>
-	);
-};
+}
 
 const Pic = () => {
 	function getRandomInt(max) {
@@ -56,11 +39,11 @@ const Pic = () => {
 	return (
 		<Link
 			to={`/explore/${randomInt}`}
-			className="min-h-0 object-cover aspect-square overflow-hidden cursor-pointer relative w-full flex-1 flex bg-cover justify-center items-center transition-all duration-500 ease-in-out image-container"
+			className="h-fit max-h-[calc((85svh-86px)/4)] min-w-[calc(20%-8px)] flex-grow aspect-square cursor-pointer relative flex bg-cover justify-center items-center transition-all duration-500 ease-in-out image-container"
 			style={{ backgroundImage: `url(${path})` }}
 		>
 			<img
-				className="rounded-[20%] w-[75%] h-[75%] z-[1] transition-all duration-500 ease-in-out main-image"
+				className="object-cover p-[15%] rounded-[20%] z-[1] transition-all duration-500 ease-in-out main-image"
 				src={path}
 				alt="a pic"
 			/>

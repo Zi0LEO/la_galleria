@@ -8,12 +8,12 @@ export const PersonalPreview = () => {
 	return (
 		<div className="flex flex-col justify-between items-center w-full h-full flex-auto">
 			<div
-				className="flex flex-col items-center w-full justify-center overflow-hidden flex-auto bg-cover"
+				className="flex flex-col h-[30svh] items-center w-full justify-center bg-cover object-contain"
 				style={{ backgroundImage: `url(${profileBanner})` }}
 			>
 				<img
 					src={imagePath}
-					className="max-h-80 rounded-full aspect-square object-cover mt-[8px] mb-[8px] shadow-2xl"
+					className="h-5/6 rounded-full aspect-square shadow-2xl"
 				/>
 			</div>
 			<div className="shrink-1">
@@ -26,9 +26,8 @@ export const PersonalPreview = () => {
 				<Button text="Il mio profilo" />
 				<Button text="Le mie foto" />
 			</div>
-			<div className="h-[20%] max-h-[150px] relative">
-				<PicRenderer rows={1} picPerRow={4} />
-			</div>
+      <p className="p-3 text-2xl font-superbold"> Le più apprezzate </p>
+			<PicRenderer pics={4} />
 		</div>
 	);
 };

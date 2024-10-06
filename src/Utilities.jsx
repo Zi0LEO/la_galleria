@@ -20,7 +20,7 @@ export const SuggestedTags = () => {
 };
 
 export const PageNavigator = (props) => {
-return <>
-  </>
+return <div className="h-[80px]">
+  </div>
 }
 
