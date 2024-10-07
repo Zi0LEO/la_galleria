@@ -59,7 +59,7 @@ export { HomeComponent };
 const Landing = () => {
 	return (
 		<div className="h-[85svh] overflow-hidden flex flex-row">
-			<div className="rounded-full z-[1] bg-radial bg-[radial-gradient(rgb(226_223_210_/_100%),rgb(226_223_210_/_70%),rgb(226_223_210_/_40%))] w-full h-[85vh] absolute left-[-50%] flex justify-center items-center">
+			<div className="rounded-full z-[1] bg-radial bg-[radial-gradient(rgb(226_223_210_/_100%),rgb(226_223_210_/_70%),rgb(226_223_210_/_40%))] w-full h-[85vh] absolute right-[50%] flex justify-center items-center animate-slideIn">
 				<h3 className="relative text-3xl font-semibold left-[40svw] w-[50svw]">
 					Benvenuto nella Galleria, il sito che ti permette di goderti al meglio
 					la tua passione per la fotografia.
