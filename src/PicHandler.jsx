@@ -56,11 +56,11 @@ const Pic = () => {
 	return (
 		<Link
 			to={`/explore/${randomInt}`}
-			className="min-h-0 object-cover aspect-square overflow-hidden cursor-pointer relative w-full flex-1 flex bg-cover justify-center items-center transition-all duration-500 ease-in-out image-container"
+			className="aspect-square overflow-hidden cursor-pointer relative w-full flex-1 flex bg-cover justify-center items-center transition-all duration-500 ease-in-out image-container"
 			style={{ backgroundImage: `url(${path})` }}
 		>
 			<img
-				className="rounded-[20%] w-[75%] h-[75%] z-[1] transition-all duration-500 ease-in-out main-image"
+				className="rounded-[20%] object-cover w-[75%] h-[75%] z-[1] transition-all duration-500 ease-in-out main-image"
 				src={path}
 				alt="a pic"
 			/>
