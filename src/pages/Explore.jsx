@@ -23,7 +23,7 @@ export default function Explore() {
 			</div>
       <PageNavigator currentUrl={ currentUrl } />
       <div className="w-[80vw]">
-      <PicRenderer rows="10" pics="5"/>
+      <PicRenderer rows={10} picPerRow={5} />
       </div>
 		</div>
 	);
