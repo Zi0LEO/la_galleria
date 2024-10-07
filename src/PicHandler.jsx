@@ -38,7 +38,7 @@ const PicRow = (props) => {
 	}, [props.picPerRow]);
 
 	return (
-		<div className="overflow-hidden flex-1 min-h-0 flex flex-row gap-1 flex-wrap">
+		<div className="overflow-hidden min-h-0 flex flex-row flex-auto gap-1">
 			{Array.from({ length: numPics }).map((_, index) => (
 				<Pic key={index} />
 			))}
@@ -56,7 +56,7 @@ const Pic = () => {
 	return (
 		<Link
 			to={`/explore/${randomInt}`}
-			className="aspect-square overflow-hidden cursor-pointer relative w-full flex-1 flex bg-cover justify-center items-center transition-all duration-500 ease-in-out image-container"
+			className="aspect-square cursor-pointer relative w-full flex-1 flex bg-cover justify-center items-center transition-all duration-500 ease-in-out image-container"
 			style={{ backgroundImage: `url(${path})` }}
 		>
 			<img

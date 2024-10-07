@@ -10,7 +10,7 @@ export default function PicPage() {
 	const path = `/pics/img${id}.jpg`;
 
 	return (
-		<div className="flex justify-between m-6 flex-wrap">
+		<div className="flex justify-around m-6 flex-wrap">
 			<div className="flex flex-col w-[70vw]">
 				<div className="overflow-hidden relative flex flex-col justify-center h-fit rounded-[40px] bg-[#e2dfd2]">
 					<div
@@ -36,7 +36,7 @@ export default function PicPage() {
 				</div>
 			</div>
 			<div className="flex flex-col w-[25vw] h-[85vh] overflow-hidden rounded-[40px] sticky top-[15svh] bg-[#e2dfd2]">
-				<PicRenderer rows={3} picPerRow={2} />
+				<PicRenderer rows={4} picPerRow={2} />
 			</div>
 		</div>
 	);
