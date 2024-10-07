@@ -2,9 +2,9 @@ export const Button = (props) => {
 	const text = props.text;
 
 	return (
-		<div className="w-max cursor-pointer flex justify-center items-center text-lg bg-gradient-to-r from-pink-400 to-violet-400 h-auto p-[5px] w-[80%] m-0.5 rounded-[15px] transition-all duration 500 ease sm:m-2 sm:p-[15px] hover:shadow-xl">
+		<button className="w-max min-w-60 cursor-pointer flex justify-center items-center text-lg bg-gradient-to-r from-pink-400 to-violet-400 h-auto p-[5px] rounded-[15px] transition-all duration 500 ease sm:m-2 sm:p-[15px] hover:shadow-xl">
 			<h4> {text} </h4>
-		</div>
+		</button>
 	);
 };
 
