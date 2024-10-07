@@ -137,9 +137,12 @@ const Profile = (props) => {
 					className="h-5/6 rounded-full aspect-square shadow-2xl"
 				/>
 			</div>
+      <span className="shrink-1 rounded-[20px] my-5 w-[80%] h-max bg-[#e2dfd2]">
 			<p className="p-1 text-xl max-h-80">
 				La mia bio: cose a caso per riempire spazio. Forza lupi sempre
+            stststststs tstststnsetnngoie tn
 			</p>
+      </span>
 		</>
 	);
 };

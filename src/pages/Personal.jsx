@@ -10,7 +10,6 @@ export const PersonalPreview = () => {
 		<div className="flex flex-col justify-between items-center w-full h-full flex-auto">
 			<Profile imagePath={imagePath} profileBanner={profileBanner} />
 			<div className="w-full items-center py-1 flex flex-col flex-auto min-h-fit">
-				<Button text="Il mio profilo" />
 				<Button text="Le mie foto" />
 			</div>
 			<div className="h-[40%] relative">

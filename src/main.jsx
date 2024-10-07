@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Explore from "./pages/Explore";
 import PicPage from "./pages/PicPage";
 import PersonalPage from "./pages/Personal";
+import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter([
 	{
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
 				path: "/",
 				element: <Home />,
 			},
+      {
+        path:"/*",
+        element: <ErrorPage />,
+      },
 			{
 				path: "/explore",
 				children: [
