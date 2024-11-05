@@ -3,7 +3,7 @@ import { SuggestedTags, PageNavigator } from "../Utilities";
 
 export const ExplorePreview = () => {
 	const rows = 3;
-  const pics = 3;
+    const pics = 3;
 
 	return <PicRenderer rows={rows} picPerRow={pics} />;
 };
