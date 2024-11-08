@@ -2,8 +2,8 @@ import { Profile } from "../BaseComponents";
 import PicRenderer from "../PicHandler";
 import { Button } from "../Utilities";
 
-let imagePath = "/images/profileImage.jpg";
-let profileBanner = "/images/profileBG.jpg";
+let imagePath = "/assets/profileImage.jpg";
+let profileBanner = "/assets/profileBG.jpg";
 
 export const PersonalPreview = () => {
 	return (

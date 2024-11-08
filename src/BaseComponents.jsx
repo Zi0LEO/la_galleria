@@ -12,7 +12,7 @@ import { ShopPreview } from "./pages/Shop";
 
 function HeaderFun() {
 	return (
-		<header className="sticky top-0 flex items-center bg-[url('../images/purpleBG.jpg')] bg-no-repeat bg-[0%_30%] bg-cover h-[15dvh] w-screen z-[999] shadow-[0_5px_15px_rgba(0,0,0,0.4)]">
+		<header className="sticky top-0 flex items-center bg-[url('../assets/purpleBG.jpg')] bg-no-repeat bg-[0%_30%] bg-cover h-[15dvh] w-screen z-[999] shadow-[0_5px_15px_rgba(0,0,0,0.4)]">
 			<Link to="/">
 				<h2 className="relative text-[#e2dfd2] font-yellowtail font-normal font-thin text-7xl px-[max(2%,20px)] cursor-pointer">
 					La Galleria
@@ -67,7 +67,7 @@ const Landing = () => {
 			</div>
 			<img
 				className="object-cover w-[200%]"
-				src="/images/landing.jpg"
+				src="/assets/landing.jpg"
 				alt="sfondo"
 			/>
 		</div>
@@ -75,6 +75,8 @@ const Landing = () => {
 };
 
 export { Landing };
+
+//<a href="https://www.vecteezy.com/free-vector/light-blue-background">Light Blue Background Vectors by Vecteezy</a>
 
 function FooterFun() {
 	return (
@@ -89,6 +91,9 @@ function FooterFun() {
 					</span>
 					<span>
 						<p className="text-[#e2dfd2]">Informazioni</p>
+					</span>
+					<span>
+						<p className="text-[#e2dfd2]">Fonti</p>{" "}
 					</span>
 				</div>
 
@@ -137,12 +142,12 @@ const Profile = (props) => {
 					className="h-5/6 rounded-full aspect-square shadow-2xl"
 				/>
 			</div>
-      <span className="shrink-1 rounded-[20px] my-5 w-[80%] h-max bg-[#e2dfd2]">
-			<p className="p-1 text-xl max-h-80">
-				La mia bio: cose a caso per riempire spazio. Forza lupi sempre
-            stststststs tstststnsetnngoie tn
-			</p>
-      </span>
+			<span className="shrink-1 rounded-[20px] my-5 w-[80%] h-max bg-[#e2dfd2]">
+				<p className="p-1 text-xl max-h-80">
+					La mia bio: cose a caso per riempire spazio. Forza lupi sempre
+					stststststs tstststnsetnrgnm csteng
+				</p>
+			</span>
 		</>
 	);
 };

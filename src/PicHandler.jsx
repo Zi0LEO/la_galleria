@@ -6,13 +6,13 @@ export default function PicRenderer(props) {
 	const picPerRow = props.picPerRow;
 
 	return (
-		<div className="overflow-auto h-full w-full min-h-0 flex flex-col gap-1">
+		<div className="overflow-scroll h-full w-full min-h-0 flex flex-col gap-1">
 			{Array.from({ length: rows }).map((_, index) => (
 				<PicRow key={index} picPerRow={picPerRow} />
 			))}
 		</div>
 	);
-};
+}
 
 export { PicRenderer };
 
@@ -38,7 +38,7 @@ const PicRow = (props) => {
 	}, [props.picPerRow]);
 
 	return (
-		<div className="flex gap-1">
+		<div className="overflow-scroll flex gap-1">
 			{Array.from({ length: numPics }).map((_, index) => (
 				<Pic key={index} />
 			))}

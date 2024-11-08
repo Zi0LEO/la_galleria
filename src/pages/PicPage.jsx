@@ -4,8 +4,8 @@ import { Button } from "../Utilities";
 
 export default function PicPage() {
 	const { id } = useParams();
-	const profileImage = "/images/profileImage.jpg";
-	const profileBanner = "/images/profileBG.jpg";
+	const profileImage = "/assets/profileImage.jpg";
+	const profileBanner = "/assets/profileBG.jpg";
 
 	const path = `/pics/img${id}.jpg`;
 
