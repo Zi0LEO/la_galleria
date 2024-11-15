@@ -10,15 +10,15 @@ export default function PicPage() {
 	const path = `/pics/img${id}.jpg`;
 
 	return (
-		<div className="flex flex-col justify-around m-5 gap-5 flex-wrap xl:flex-row">
+		<div className="flex flex-col justify-around m-4 gap-5 flex-wrap xl:flex-row">
 			<div className="flex flex-col w-[100svw-40px] xl:w-[70vw]">
 				<div className="overflow-hidden relative flex flex-col justify-center h-fit rounded-[40px] bg-[#e2dfd2]">
 					<div
 						className="bg-cover bg-center flex items-center p-5 mb-2 profile-banner relative"
 						style={{ backgroundImage: `url(${profileBanner})` }}
 					>
-						<img src={profileImage} className="mx-10 rounded-full h-12 w-12" />
-						<h2 className="font-bold text-xl"> Nome dell'autore </h2>
+						<img src={profileImage} className="mx-8 rounded-full aspect-squars w-20" />
+						<h2 className="font-bold text-xl p-[10px] bg-[#e2dfd2] rounded-[10px]"> Nome dell'autore </h2>
 					</div>
 					<img
 						src={path}

@@ -35,6 +35,7 @@ const HomeComponent = (props) => {
 		link = "/explore";
 	} else if (text === "Shop") {
 		content = ShopPreview;
+    link = "/shop"
 	} else {
 		content = PersonalPreview;
 		link = "/personal";
@@ -142,10 +143,10 @@ const Profile = (props) => {
 					className="h-5/6 rounded-full aspect-square shadow-2xl"
 				/>
 			</div>
-			<span className="shrink-1 rounded-[20px] my-5 w-[80%] h-max bg-[#e2dfd2]">
-				<p className="p-1 text-xl max-h-80">
-					La mia bio: cose a caso per riempire spazio. Forza lupi sempre
-					stststststs tstststnsetnrgnm csteng
+			<span className="font-bold text-xl shrink-1 rounded-[20px] my-5 w-[80%] h-max bg-[#e2dfd2]">
+				<p className="p-1 text-xl max-h-80 no-overflow">
+					La mia bio: cose a caso per riempire spazio. 
+          Forza lupi sempre	saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqatststststs tstststnsetnrgnm csteng
 				</p>
 			</span>
 		</>

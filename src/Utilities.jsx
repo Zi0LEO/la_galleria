@@ -10,7 +10,7 @@ export const Button = (props) => {
 
 export const SuggestedTags = () => {
 	return (
-		<div className="w-[70svw] flex flex-row flex-wrap justify-center items-center overflow-scroll sm:flex-nowrap">
+		<div className="min-w-[70svw] max-w-[90svw] gap-2 flex flex-row flex-wrap justify-center items-center ">
 			<Button text="Nature" />
 			<Button text="Tree" />
 			<Button text="Sea" />
