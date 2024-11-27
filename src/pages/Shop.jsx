@@ -14,7 +14,7 @@ export const ShopPreview = () => {
 					{balance}
 				</h3>
 			</div>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col items-center gap-1">
 			<Button text="Aggiungi foto" />
 			<Button text="Modifica saldo" />
 			<Button text="Guida allo shop" />

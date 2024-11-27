@@ -35,7 +35,7 @@ const HomeComponent = (props) => {
 		link = "/explore";
 	} else if (text === "Shop") {
 		content = ShopPreview;
-    link = "/shop"
+		link = "/shop";
 	} else {
 		content = PersonalPreview;
 		link = "/personal";
@@ -143,10 +143,15 @@ const Profile = (props) => {
 					className="h-5/6 rounded-full aspect-square shadow-2xl"
 				/>
 			</div>
-			<span className="font-bold text-xl shrink-1 rounded-[20px] my-5 w-[80%] h-max bg-[#e2dfd2]">
+			<span className="font-bold bg-opacity-:0 text-xl shrink-1 rounded-[20px] my-5 w-[80%] h-max bg-[#e2dfd2]">
 				<p className="p-1 text-xl max-h-80 no-overflow">
-					La mia bio: cose a caso per riempire spazio. 
-          Forza lupi sempre	saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqatststststs tstststnsetnrgnm csteng
+<<<<<<< Updated upstream
+    Questa è la mia bio, fa parte del mio profilo.
+    Qui posso scrivere tutto quello che voglio sulle mie passioni e su cosa mi piace fotografare
+=======
+    Questa è la mia bio.
+    Qui posso scrivere tutto quello che voglio su di me, sulle mie passioni, su cosa mi piace fotografare.
+>>>>>>> Stashed changes
 				</p>
 			</span>
 		</>
@@ -154,8 +159,8 @@ const Profile = (props) => {
 };
 
 Profile.propTypes = {
-	profileBanner: PropTypes.String,
-	imagePath: PropTypes.String,
+	profileBanner: PropTypes.string,
+	imagePath: PropTypes.string,
 };
 
 export { Profile };
